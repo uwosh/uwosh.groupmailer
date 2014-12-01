@@ -1,0 +1,8 @@
+Changelog
+=========
+
+0.1 - (August 4, 2009)
+----------------
+
+* Initial release
+

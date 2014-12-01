@@ -1,0 +1,17 @@
+<html metal:use-macro="context/@@standard_macros/view">
+<head>
+</head>
+
+<body>
+  <div metal:fill-slot="body">
+    <h1>Message Sent Successfully</h1>
+    <p>
+      <strong>From:</strong> <span tal:replace="view/fromAddress">fromAddress</span><br />
+      <strong>To:</strong> <span tal:replace="view/recipientsAsCSVString">recipients</span><br />
+      <strong>Subject:</strong> <span tal:replace="view/subject">subject</span><br />
+      <strong>Body:</strong> <span tal:replace="structure view/bodyAsHTML">body</span>
+    </p>
+  </div>
+</body>
+
+</html>

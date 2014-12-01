@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="uwosh.groupmailer">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <permission
+      id="uwosh.groupmailer.SendMail"
+      title="uwosh.groupmailer: Send Mail"
+      />
+
+  <include package=".browser" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="uwosh.groupmailer"
+      directory="profiles/default"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

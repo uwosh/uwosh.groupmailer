@@ -1,0 +1,16 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           i18n_domain="uwosh.groupmailer">
+
+    <browser:page
+        for="*"
+        name="sendgroupmail"
+        class=".sendgroupmail.SendGroupMail"
+        permission="uwosh.groupmailer.SendMail" />
+
+    <utility
+        component=".sendgroupmail.availableGroups"
+        name="Available Groups"
+        provides="zope.schema.interfaces.IVocabularyFactory" />
+
+</configure>
